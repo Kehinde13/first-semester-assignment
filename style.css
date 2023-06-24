@@ -2,6 +2,17 @@ HTML, body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* Header Section */
@@ -18,12 +29,12 @@ header > img {
     align-self: center;
 }
 
-header > ul {
+header > ul, .One-stop > div > ul{
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     align-self: center;
-    gap: 50px;
+    gap: 60px;
 }
 
 header > div {
@@ -33,7 +44,7 @@ header > div {
 }
 
 .Login > button {
-    padding: 0 30px;
+    padding: 10px 30px;
     border-radius: 30px;
     border: 0;
     color: white;
@@ -44,17 +55,17 @@ header > div {
     color: #005AE2;
 }
 
-/* Hero Section */
+/* Optimize-online-experience */
 
-.Hero {
-    max-width: 700px;
+.Optimize-online-experience {
+    max-width: 50%;
     margin: 100px auto;
     text-align: center;
     position: relative;
     
 }
 
-.Hero > h1 {
+.Optimize-online-experience > h1 {
     font-size: 2em;
     line-height: 60px;
 }
@@ -63,20 +74,20 @@ h1 > span {
     color: #005AE2;
 }
 
-.Hero > img {
+.Optimize-online-experience > img {
     max-width: 150px;
     position: absolute;
     top: 120px;
     left: 300px;
 }
 
-.Hero > p {
+.Optimize-online-experience > p {
     max-width: 500px;
     margin: 20px auto;
 }
 
-.sign-up > button{
-    padding: 8px 30px;
+.Optimize-online-experience > div > button{
+    padding: 10px 30px;
     border: 0;
     color: white;
     background-color: #005AE2;
@@ -84,37 +95,432 @@ h1 > span {
     margin-right: 20px;
 }
 
-.sign-up > a {
+.Optimize-online-experience > div > a {
     text-decoration: none;
     color: #005AE2;
 }
 
-/* Group 2 */
+/* Seamlessly */
 
-.group2{
+.Seamlessly{
     position: relative;
-    max-width: 833px;
+    max-width: 60%;
     margin: 10px auto;
 }
 
-.group2 > img {
-    position: fixed;
+.Seamlessly > img {
+    position: absolute;
     z-index: -10;
     top: -20px;
     left: 5px;
 } 
 
-.Seamlessly{
-    width: 650px;
+.Seamlessly > div{
+    width: 80%;
     padding: 40px 60px 40px 60px; 
     border: 1px solid #87b3f5;
     border-radius: 24px;
     background-image: linear-gradient(to right, #EBF0F4, #ffff);
 }
 
-.Seamlessly > p {
+.Seamlessly > div > p {
     text-align: center;
     margin: 5px auto;
     max-width: 400px;
 }
+
+/* One-stop */
+
+.One-stop > img {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.One-stop > div > h1 {
+   font-size: 2em;
+}
+
+.One-stop > div {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 40px 130px;
+    background-color: #F9FBFD;
+    margin-top: -5px;
+}
+
+/* why choose scissors */
+
+.why-choose-scissors{
+    margin: 80px 120px;
+    display: flex;
+    justify-content: space-around;
+    gap: 150px;
+}
+
+.why-choose-scissors-header {
+    width: 40%;
+    margin-top: 20px;
+    position: relative; 
+}
+
+.why-choose-scissors-header > h1 {
+    font-size: 1.8em;
+}
+
+.why-choose-scissors-header > img {
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+
+.why-choose-scissors-main {
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.why-choose-scissors-main > div {
+    max-width: 240px;
+}
+
+/* Price Perfect */
+
+.price-perfect  {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.price-perfect-header {
+    position: relative;
+}
+
+.price-perfect-header > img {
+    position: absolute;
+    left: 30px;
+}
+
+.price-perfect-header > h1 {
+    font-size: 1.8em;
+}
+
+.price-perfect-main {
+    display: flex;
+    max-width: 800px; 
+    margin-top: 100px;
+    margin-left: -300px;
+    text-align: left;
+}
+
+.Basic, .Teams {
+    min-width: 250px;
+    padding: 50px;
+    border: 1px solid #87b3f5;
+    border-radius: 10px;
+    height: 300px;
+    align-self: center;
+}
+
+.Professional {
+    min-width: 300px;
+    height: 450px;
+    border: 1px solid #87b3f5;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: #1e3448;
+    color: white;
+}
+
+.Basic > h1, .Teams > h1, .Professional > h1 {
+    font-size: 2em;
+} 
+
+.Basic > h3, .Teams > h3, .Professional > h3 {
+    font-size: 1em;
+}
+
+.Professional > h3 {
+    margin-top: 60px;
+}
+
+.Basic > ul, .Teams > ul, .Professional > ul {
+    margin-left: -40px;
+}
+
+.Basic > ul > li, .Teams > ul >  li, .Professional > ul > li {
+    margin-bottom: 15px;
+}
+
+.price-perfect-buttons {
+    margin: 50px 0px;
+    font-size: 1.5em;
+}
+
+.price-perfect-buttons > .custom {
+    margin: 0 20px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: 1px solid #005AE2;
+    color: #005AE2;
+}
+
+.price-perfect-buttons > .select {
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: 0;
+    color: white;
+    background-color: #005AE2;   
+}
+
+/* Form */
+
+.form {
+    background-color: #1e3448;
+    height: 500px;
+    position: relative
+}
+
+.form > img {
+    position: absolute;
+    max-height: 500px;
+}
+
+.form > .bottom-img {
+    top: 0;
+    right: 0;
+}
+
+form {
+    max-width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 90px;
+    left: 450px;
+}
+
+form input {
+    width: 90%;
+    padding: 16px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #005AE2;
+    color: #005AE2;
+}
+
+form > div {
+    display: flex;
+    margin-left: 16px;
+}
+
+select {
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 5px;
+    align-self: center;
+    border: 1px solid #005AE2;
+    color: #005AE2;
+}
+
+form > div > input {
+    width: 50%;
+}
+
+form > button {
+    width: 100%;
+    padding: 8px;
+    margin: 30px 0;
+    border-radius: 20px;
+    color: white;
+    background-color: #005AE2;
+    border: 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+form > p {
+    color: #005AE2;
+}
+
+/* revolutional */
+
+.revolutional {
+    background-color: #1e3448;
+    height: 300px;
+    position: relative;
+    margin: 50px 0;
+}
+
+.revolutional > img {
+    position: absolute;
+    max-height: 300px;
+}
+
+.revolutional > .bottom-img {
+    top: 0;
+    right: 0;
+}
+
+.revolutional > div {
+    width: 50%;
+    position: absolute;
+    top: 90px;
+    left: 300px;
+    text-align: center;
+    color: white;
+}
+
+.revolutional > div > h1 {
+    font-size: 2em;
+}
+
+.revolutional > div > button {
+    padding: 15px 50px;
+    margin: 30px 0;
+    border-radius: 20px;
+    color: white;
+    background-color: #005AE2;
+    border: 0;
+}
+
+/* FAQ */
+.FAQ {
+    position: relative;
+    padding: 100px 0;
+    height: 1000px;
+}
+
+.FAQ > Img {
+    position: absolute;
+}
+
+.FAQ > .bottom-img {
+    right: 0;
+    bottom: -50px;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.faq-header > h1 {
+    font-size: 2.6em;
+}
+
+.faq-header > img {
+    align-self: center;
+}
+
+.faq-main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.accordion::after {
+    content: '\02795';
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.active::after {
+    content: '\2796';
+}
+
+.accordion > img {
+    align-self: center;
+    cursor: pointer;
+}
+
+
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+
+
+/* Footer */
+
+footer {
+    position: relative;
+}
+
+footer > img {
+    position: absolute;
+}
+
+footer > .bottom-img {
+    right: 0;
+    top: 180px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+} 
+
+.footer > .logo {
+    margin-right: 20px;
+}
+
+.footer > .logo > img {
+    margin: 15px 0;
+}
+
+.footer > .logo > div > img {
+    margin: 5px;
+}
+
+.footer > .lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-list-header {
+    margin-left: 36px;
+    font-size: 1.6em;
+}
+
+.footer-lists > li {
+    margin: 5px 0;
+}
+
+.footer > p {
+    align-self: flex-end;
+    width: 50%;
+    margin-left: -28px;
+}
+
+
+
+
+
+
+
+
+
+   
+
+
 
