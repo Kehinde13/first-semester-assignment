@@ -6,6 +6,19 @@ HTML, body {
     font-family: 'Red Hat Display', sans-serif;
 }
 
+::placeholder { 
+    color: #005AE2;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder { 
+    color: #005AE2;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #005AE2;
+  }
+
 
 ul {
     list-style-type: none;
@@ -13,6 +26,7 @@ ul {
 
 button {
     cursor: pointer;
+    font-weight: bold;
 }
 
 /* Header Section */
@@ -37,6 +51,15 @@ header > ul, .One-stop > div > ul{
     gap: 60px;
 }
 
+header > ul > li >  a {
+    text-decoration: none;
+    color: black;
+}
+
+header > ul > li >  a:hover {
+    color: #005AE2;
+}
+
 header > div {
     display: flex;
     justify-content: space-between;
@@ -51,7 +74,7 @@ header > div {
     background-color: #005AE2;
 }
 
-.Login > p, .url {
+.Login > p {
     color: #005AE2;
 }
 
@@ -82,7 +105,7 @@ h1 > span {
 }
 
 .Optimize-online-experience > p {
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
 }
 
@@ -143,8 +166,8 @@ h1 > span {
 .One-stop > div {
     display: flex;
     justify-content: space-around;
-    gap: 50px;
-    padding: 40px 130px;
+    gap: 20px;
+    padding: 40px 100px;
     background-color: #F9FBFD;
     margin-top: -5px;
 }
@@ -476,7 +499,7 @@ footer > .bottom-img {
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px;
+    padding: 0 50px;
 } 
 
 .footer > .logo {
