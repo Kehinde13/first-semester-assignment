@@ -2,7 +2,9 @@ const button = document.getElementsByClassName("accordion");
 const copyButton = document.querySelector(".copyButton");
 const alert = document.querySelector("#alert");
 const shortUrl = document.querySelector("#shortUrl");
+const trimButton = document.querySelector("#trimButton")
 
+/* Accordion */
 for (let i = 0; i < button.length; i++) {
   button[i].addEventListener("click", () => {
     if (button[i].classList.contains("active")) {
@@ -14,6 +16,14 @@ for (let i = 0; i < button.length; i++) {
   });
 }
 
+/* Trimbutton */
+trimButton.addEventListener('click', (e) => {
+    e.preventDefault(e)
+    UrlShortener()
+})
+
+
+/* URL Shortener */
 async function UrlShortener() {
   let longUrl = document.getElementById("Url").value;
 
@@ -22,6 +32,7 @@ async function UrlShortener() {
   shortUrl.value = data.result.short_link2;
 }
 
+/* Copy Button */
 copyButton.addEventListener("click", () => {
   shortUrl.select();
   shortUrl.setSelectionRange(0, 99999);
