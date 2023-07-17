@@ -308,6 +308,7 @@ form {
     padding: 30px;
     border-radius: 10px;
     position: absolute;
+    z-index: 10;
 }
 
 form input {
@@ -318,6 +319,21 @@ form input {
     border: 1px solid #005AE2;
     color: #005AE2;
 }
+
+form > div {
+    position: relative;
+}
+
+
+form > div > img {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    width: 5%;
+    cursor: pointer;
+    z-index: 10;
+}
+
 
 form > button {
     width: 100%;
@@ -503,6 +519,15 @@ footer > .bottom-img {
     width: 100%;    
 }
 
+@media only screen and (max-width: 450px) {
+    
+form > div > img {
+    position:absolute;
+    top: 30px;
+    right: 30px;
+}
+}
+
 @media only screen and (min-width: 750px) {
     .Seamlessly {
      margin-left: 200px;
@@ -642,6 +667,13 @@ footer > .bottom-img {
     form {
         margin-left: 400px;
     }
+
+    
+form > div > img {
+    position:absolute;
+    top: 20px;
+    right: 80px;
+}
 
     /* FAQ */
 
