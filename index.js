@@ -3,9 +3,17 @@ const copyButton = document.querySelector('.copyButton');
 const alert = document.querySelector('#alert');
 const shortUrl = document.querySelector('#shortUrl');
 const trimButton = document.querySelector('#trimButton');
-const input = document.getElementById('Url')
+const input = document.getElementById('Url');
 
-
+// TODO: Add a validation to check the value if it is a valid URL. Options (Regex or URL)
+    // https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
+const isUrl = (string) => {
+  try {
+    return Boolean(new URL(string));
+  } catch (e) {
+    return false;
+  }
+};
 
 /* Accordion */
 for (let i = 0; i < button.length; i++) {
@@ -19,12 +27,19 @@ for (let i = 0; i < button.length; i++) {
   });
 }
 // TODO: disable Trimbutton by default and enable it when input#Url has content more than 0
-input.onchange = function(event) {
+input.oninput = function (event) {
   let value = event.target.value;
-  if (value.length > 0) {
-    trimButton.setAttribute('disable', false)
+  // check if a valid url
+
+  if (isUrl(value)) {
+    console.log(event);
+    trimButton.setAttribute('disabled', false);
+    trimButton.classList.remove('disabled');
+  } else {
+    trimButton.setAttribute('disabled', true);
+    trimButton.classList.add('disabled');
   }
-}
+};
 
 /* Trimbutton */
 trimButton.addEventListener('click', async (e) => {
@@ -39,9 +54,7 @@ trimButton.addEventListener('click', async (e) => {
 /* URL Shortener */
 async function urlShortener(value) {
   if (!value) {
-    alert('Please pass in a valid url')
-    // TODO: Add a validation to check the value if it is a valid URL. Options (Regex or URL)
-    // https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
+    alert('Please pass in a valid url');
   }
   const result = await fetch(`https://api.shrtco.de/v2/shorten?url=${value}`);
   const data = await result.json();

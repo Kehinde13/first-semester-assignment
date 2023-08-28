@@ -7,7 +7,7 @@ body {
     font-size: 16px;
     box-sizing: border-box;
     font-family: 'Red Hat Display', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 ::placeholder {
@@ -31,6 +31,11 @@ ul {
 button {
     cursor: pointer;
     font-weight: bold;
+}
+
+button.disabled {
+    cursor: not-allowed;
+    filter: opacity(0.8);
 }
 
 a {
