@@ -1,6 +1,7 @@
 /* implement how to show content on scroll using innerHeight, clientHeight, getBoundingClientRect */
 
-HTML, body {
+HTML,
+body {
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -9,18 +10,18 @@ HTML, body {
     overflow-x: hidden;
 }
 
-::placeholder { 
+::placeholder {
     color: #005AE2;
     opacity: 1;
-  }
-  
-  :-ms-input-placeholder { 
+}
+
+:-ms-input-placeholder {
     color: #005AE2;
-  }
-  
-  ::-ms-input-placeholder {
+}
+
+::-ms-input-placeholder {
     color: #005AE2;
-  }
+}
 
 
 ul {
@@ -37,7 +38,7 @@ a {
     color: #005AE2;
 }
 
-h1 > span {
+h1>span {
     color: #005AE2;
 }
 
@@ -64,7 +65,7 @@ header ul {
     display: none;
 }
 
-header > img {
+header>img {
     align-self: center;
 }
 
@@ -73,11 +74,11 @@ header div {
     gap: 10px;
 }
 
-.Login > p {
+.Login>p {
     color: #005AE2;
 }
 
-button > a {
+button>a {
     color: white;
 }
 
@@ -97,22 +98,22 @@ button > a {
     display: none;
 }
 
-.Seamlessly{
+.Seamlessly {
     position: relative;
     max-width: 60%;
     margin: 50px 30px;
 }
 
-.Seamlessly > img {
+.Seamlessly>img {
     position: absolute;
     z-index: -10;
     top: -20px;
     left: 5px;
-} 
+}
 
-.Seamlessly > div{
+.Seamlessly>div {
     width: 80%;
-    padding: 40px 60px 40px 60px; 
+    padding: 40px 60px 40px 60px;
     border: 1px solid #87b3f5;
     border-radius: 24px;
     background-image: linear-gradient(to right, #EBF0F4, #ffff);
@@ -122,7 +123,7 @@ button > a {
     width: 100%;
 }
 
-.Seamlessly > div > p {
+.Seamlessly>div>p {
     text-align: center;
     margin: 5px auto;
     max-width: 100%;
@@ -130,23 +131,23 @@ button > a {
 
 /* One Stop */
 
-.One-stop > img {
+.One-stop>img {
     margin-top: 50px;
     width: 100%;
 }
 
-.One-stop > div {
+.One-stop>div {
     background-color: #F9FBFD;
     margin-top: -5px;
     padding: 5px;
 }
 
-.One-stop > div > h1 {
-   font-size: 2em;
-   margin-left: 20px;
+.One-stop>div>h1 {
+    font-size: 2em;
+    margin-left: 20px;
 }
 
-.One-stop > div > ul {
+.One-stop>div>ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -156,22 +157,22 @@ button > a {
 
 /* Why choose scissors */
 
-.why-choose-scissors{
+.why-choose-scissors {
     margin: 80px 10px;
 }
 
 .why-choose-scissors-header {
     width: 100%;
     margin-top: 20px;
-    position: relative; 
+    position: relative;
 }
 
-.why-choose-scissors-header > h1 {
+.why-choose-scissors-header>h1 {
     font-size: 1.8em;
     padding: 5px;
 }
 
-.why-choose-scissors-header > img {
+.why-choose-scissors-header>img {
     position: absolute;
     top: 0px;
     left: -5px;
@@ -184,13 +185,13 @@ button > a {
     gap: 50px;
 }
 
-.why-choose-scissors-main > div {
+.why-choose-scissors-main>div {
     max-width: 240px;
 }
 
 /* price-perfect */
 
-.price-perfect  {
+.price-perfect {
     max-width: 500px;
     margin: 50px auto;
     text-align: center;
@@ -200,16 +201,16 @@ button > a {
     position: relative;
 }
 
-.price-perfect-header > img {
+.price-perfect-header>img {
     position: absolute;
     left: 10px;
 }
 
-.price-perfect-header > h1 {
+.price-perfect-header>h1 {
     font-size: 1.8em;
 }
 
-.price-perfect-header > p {
+.price-perfect-header>p {
     padding: 5px;
 }
 
@@ -217,12 +218,13 @@ button > a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 800px; 
+    max-width: 800px;
     text-align: left;
     padding: 5px;
 }
 
-.Basic, .Teams {
+.Basic,
+.Teams {
     min-width: 200px;
     padding: 50px;
     border: 1px solid #87b3f5;
@@ -240,23 +242,31 @@ button > a {
     color: white;
 }
 
-.Basic > h1, .Teams > h1, .Professional > h1 {
+.Basic>h1,
+.Teams>h1,
+.Professional>h1 {
     font-size: 2em;
-} 
+}
 
-.Basic > h3, .Teams > h3, .Professional > h3 {
+.Basic>h3,
+.Teams>h3,
+.Professional>h3 {
     font-size: 1em;
 }
 
-.Professional > h3 {
+.Professional>h3 {
     margin-top: 60px;
 }
 
-.Basic > ul, .Teams > ul, .Professional > ul {
+.Basic>ul,
+.Teams>ul,
+.Professional>ul {
     margin-left: -40px;
 }
 
-.Basic > ul > li, .Teams > ul >  li, .Professional > ul > li {
+.Basic>ul>li,
+.Teams>ul>li,
+.Professional>ul>li {
     margin-bottom: 15px;
 }
 
@@ -265,7 +275,7 @@ button > a {
     font-size: 1.5em;
 }
 
-.price-perfect-buttons > .custom {
+.price-perfect-buttons>.custom {
     margin: 0 20px;
     padding: 20px 30px;
     border-radius: 30px;
@@ -275,10 +285,10 @@ button > a {
     margin-bottom: 10px;
 }
 
-.price-perfect-buttons > .select {
+.price-perfect-buttons>.select {
     padding: 20px 30px;
     border-radius: 30px;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
 }
 
 /* Form */
@@ -289,13 +299,13 @@ button > a {
     position: relative
 }
 
-.form > img {
+.form>img {
     position: absolute;
     max-height: 500px;
     max-width: 600px;
 }
 
-.form > .bottom-img {
+.form>.bottom-img {
     right: 0;
     bottom: 0;
 }
@@ -320,12 +330,12 @@ form input {
     color: #005AE2;
 }
 
-form > div {
+form>div {
     position: relative;
 }
 
 
-form > div > img {
+form>div>img {
     position: absolute;
     top: 20px;
     right: 80px;
@@ -335,7 +345,7 @@ form > div > img {
 }
 
 
-form > button {
+form>button {
     width: 100%;
     padding: 8px;
     margin: 30px 0;
@@ -350,7 +360,7 @@ form > button {
     gap: 5px;
 }
 
-form > p {
+form>p {
     color: #005AE2;
     font-size: small;
 }
@@ -362,12 +372,12 @@ form > p {
     height: 1300px;
 }
 
-.FAQ > Img {
+.FAQ>Img {
     position: absolute;
     z-index: -10;
 }
 
-.FAQ > .bottom-img {
+.FAQ>.bottom-img {
     right: 0;
     bottom: -10px;
 }
@@ -378,11 +388,11 @@ form > p {
     gap: 10px;
 }
 
-.faq-header > h1 {
+.faq-header>h1 {
     font-size: 2.6em;
 }
 
-.faq-header > img {
+.faq-header>img {
     align-self: center;
 }
 
@@ -407,7 +417,7 @@ form > p {
     content: '\2796';
 }
 
-.accordion > img {
+.accordion>img {
     align-self: center;
     cursor: pointer;
 }
@@ -430,18 +440,18 @@ form > p {
     margin-top: -10px;
 }
 
-.revolutional > img {
+.revolutional>img {
     position: absolute;
     max-height: 300px;
     max-width: 400px;
 }
 
-.revolutional > .bottom-img {
+.revolutional>.bottom-img {
     bottom: 0;
     right: 0;
 }
 
-.revolutional > div {
+.revolutional>div {
     width: 80%;
     text-align: center;
     color: white;
@@ -449,12 +459,12 @@ form > p {
     padding: 50px 0px;
 }
 
-.revolutional > div > h1 {
+.revolutional>div>h1 {
     font-size: 1.6em;
-    
+
 }
 
-.revolutional > div > button {
+.revolutional>div>button {
     padding: 15px 50px;
     margin: 30px 0;
     border-radius: 20px;
@@ -470,36 +480,36 @@ footer {
     text-align: center;
 }
 
-footer > img {
+footer>img {
     position: absolute;
 }
 
-footer > .top-img {
+footer>.top-img {
     display: none;
 }
 
-footer > .bottom-img {
+footer>.bottom-img {
     right: 0;
     bottom: 0;
 }
 
 .footer {
     padding: 10px 50px;
-} 
+}
 
-.footer > .logo {
+.footer>.logo {
     margin-right: 20px;
 }
 
-.footer > .logo > img {
+.footer>.logo>img {
     margin: 15px 0;
 }
 
-.footer > .logo > div > img {
+.footer>.logo>div>img {
     margin: 5px;
 }
 
-.footer > .lists {
+.footer>.lists {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -511,26 +521,26 @@ footer > .bottom-img {
     font-size: 1.6em;
 }
 
-.footer-lists > li {
+.footer-lists>li {
     margin: 5px 0;
 }
 
-.footer > p {
-    width: 100%;    
+.footer>p {
+    width: 100%;
 }
 
 @media only screen and (max-width: 450px) {
-    
-form > div > img {
-    position:absolute;
-    top: 30px;
-    right: 30px;
-}
+
+    form>div>img {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
 }
 
 @media only screen and (min-width: 750px) {
     .Seamlessly {
-     margin-left: 200px;
+        margin-left: 200px;
     }
 
     form {
@@ -544,48 +554,49 @@ form > div > img {
         justify-content: space-between;
         padding: 10px 50px;
     }
-    
-    header > ul, .One-stop > div > ul{
+
+    header>ul,
+    .One-stop>div>ul {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
         align-self: center;
         gap: 60px;
     }
-    
-    header > ul > li >  a {
+
+    header>ul>li>a {
         text-decoration: none;
         color: black;
     }
-    
-    header > ul > li >  a:hover {
+
+    header>ul>li>a:hover {
         color: #005AE2;
     }
-    
-    header > div {
+
+    header>div {
         gap: 20px;
     }
 
-    .Login > button {
+    .Login>button {
         padding: 20px 30px;
     }
 
 
-  /* optimize online experience */
+    /* optimize online experience */
 
     .Optimize-online-experience {
         max-width: 50%;
         margin: 100px auto;
         position: relative;
-        
+
     }
-    
-    .Optimize-online-experience > h1 {
+
+    .Optimize-online-experience>h1 {
         font-size: 2em;
         line-height: 60px;
     }
-    
-    .Optimize-online-experience > img {
+
+    .Optimize-online-experience>img {
         display: inline;
         max-width: 150px;
         position: absolute;
@@ -603,7 +614,7 @@ form > div > img {
         width: 60%;
     }
 
-    .Seamlessly > div > p {
+    .Seamlessly>div>p {
         text-align: center;
         margin: 5px auto;
         width: 400px;
@@ -611,7 +622,7 @@ form > div > img {
 
     /* One Stop */
 
-    .One-stop > div {
+    .One-stop>div {
         display: flex;
         justify-content: space-around;
         gap: 20px;
@@ -629,14 +640,14 @@ form > div > img {
     .why-choose-scissors-header {
         width: 40%;
         margin-top: 20px;
-        position: relative; 
+        position: relative;
     }
-    
-    .why-choose-scissors-header > h1 {
+
+    .why-choose-scissors-header>h1 {
         font-size: 1.8em;
     }
-    
-    .why-choose-scissors-header > img {
+
+    .why-choose-scissors-header>img {
         position: absolute;
         top: 20px;
         left: -10px;
@@ -649,15 +660,16 @@ form > div > img {
         gap: 0;
         margin-top: 100px;
         margin-left: -300px;
-    
+
     }
 
-    .Basic, .Teams {
+    .Basic,
+    .Teams {
         min-width: 250px;
         align-self: center;
         height: 350px;
-    }  
-    
+    }
+
     .Professional {
         min-width: 300px;
     }
@@ -668,12 +680,12 @@ form > div > img {
         margin-left: 400px;
     }
 
-    
-form > div > img {
-    position:absolute;
-    top: 20px;
-    right: 80px;
-}
+
+    form>div>img {
+        position: absolute;
+        top: 20px;
+        right: 80px;
+    }
 
     /* FAQ */
 
@@ -687,23 +699,23 @@ form > div > img {
         text-align: left;
         margin-top: 50px;
     }
-    
-    footer > .top-img {
+
+    footer>.top-img {
         display: block;
     }
-    
-    footer > .bottom-img {
+
+    footer>.bottom-img {
         right: 0;
         top: 180px;
     }
-    
+
     .footer {
         display: flex;
         justify-content: space-between;
         padding: 0 50px;
-    } 
+    }
 
-    .footer > p {
+    .footer>p {
         align-self: flex-end;
         width: 50%;
         margin-left: -28px;
