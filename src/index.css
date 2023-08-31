@@ -1,0 +1,734 @@
+/* implement how to show content on scroll using innerHeight, clientHeight, getBoundingClientRect */
+
+HTML,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    /* overflow-x: hidden; */ 
+}
+
+::placeholder {
+    color: #005AE2;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #005AE2;
+}
+
+::-ms-input-placeholder {
+    color: #005AE2;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.disabled {
+    cursor: not-allowed;
+    filter: opacity(0.8);
+}
+
+a {
+    text-decoration: none;
+    color: #005AE2;
+}
+
+h1>span {
+    color: #005AE2;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    background-color: #005AE2;
+    margin-right: 10px;
+    align-self: center;
+    border: 0;
+}
+
+/* NavBar */
+
+.Header {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20;
+}
+
+.Header ul {
+    display: none;
+}
+
+.Header>img {
+    align-self: center;
+}
+
+.Header div {
+    display: flex;
+    gap: 10px;
+}
+
+.Login>p {
+    color: #005AE2;
+}
+
+button>a {
+    color: white;
+}
+
+/* Optimize-online-experience */
+
+.Optimize-online-experience {
+  padding: 0 5px;
+    max-width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.Optimize-online-experience h1 span {
+    color: #005AE2;
+}
+
+.Optimize-online-experience img {
+    display: none;
+}
+
+.Seamlessly {
+    position: relative;
+    max-width: 60%;
+    margin: 50px 30px;
+}
+
+.Seamlessly>img {
+    position: absolute;
+    z-index: -10;
+    top: -20px;
+    left: 5px;
+}
+
+.Seamlessly>div {
+    width: 80%;
+    padding: 40px 60px 40px 60px;
+    border: 1px solid #87b3f5;
+    border-radius: 24px;
+    background-image: linear-gradient(to right, #EBF0F4, #ffff);
+}
+
+.Seamlessly div img {
+    width: 100%;
+}
+
+.Seamlessly>div>p {
+    text-align: center;
+    margin: 5px auto;
+    max-width: 100%;
+}
+
+/* One Stop */
+
+.One-stop>img {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.One-stop>div {
+    background-color: #F9FBFD;
+    margin-top: -5px;
+    padding: 5px;
+}
+
+.One-stop>div>h1 {
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+.One-stop>div>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 0;
+}
+
+/* Why choose scissors */
+
+.why-choose-scissors {
+    margin: 80px 10px;
+}
+
+.why-choose-scissors-header {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.why-choose-scissors-header>h1 {
+    font-size: 1.8em;
+    padding: 5px;
+}
+
+.why-choose-scissors-header>img {
+    position: absolute;
+    top: 0px;
+    left: -5px;
+}
+
+.why-choose-scissors-main {
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.why-choose-scissors-main>div {
+    max-width: 240px;
+}
+
+/* price-perfect */
+
+.price-perfect {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.price-perfect-header {
+    position: relative;
+}
+
+.price-perfect-header>img {
+    position: absolute;
+    left: 10px;
+}
+
+.price-perfect-header>h1 {
+    font-size: 1.8em;
+}
+
+.price-perfect-header>p {
+    padding: 5px;
+}
+
+.price-perfect-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    text-align: left;
+    padding: 5px;
+}
+
+.Basic,
+.Teams {
+    min-width: 200px;
+    padding: 50px;
+    border: 1px solid #87b3f5;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.Professional {
+    min-width: 250px;
+    height: 450px;
+    border: 1px solid #87b3f5;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: #1e3448;
+    color: white;
+}
+
+.Basic>h1,
+.Teams>h1,
+.Professional>h1 {
+    font-size: 2em;
+}
+
+.Basic>h3,
+.Teams>h3,
+.Professional>h3 {
+    font-size: 1em;
+}
+
+.Professional>h3 {
+    margin-top: 60px;
+}
+
+.Basic>ul,
+.Teams>ul,
+.Professional>ul {
+    margin-left: -40px;
+}
+
+.Basic>ul>li,
+.Teams>ul>li,
+.Professional>ul>li {
+    margin-bottom: 15px;
+}
+
+.price-perfect-buttons {
+    margin: 50px 0px;
+    font-size: 1.5em;
+}
+
+.price-perfect-buttons>.custom {
+    margin: 0 20px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: 1px solid #005AE2;
+    color: #005AE2;
+    background-color: #F9FBFD;
+    margin-bottom: 10px;
+}
+
+.price-perfect-buttons>.select {
+    padding: 20px 30px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+/* Form */
+
+.form {
+    background-color: #1e3448;
+    height: 500px;
+    position: relative
+}
+
+.form>img {
+    position: absolute;
+    max-height: 500px;
+    max-width: 600px;
+}
+
+.form>.bottom-img {
+    right: 0;
+    bottom: 0;
+}
+
+form {
+    max-width: 90%;
+    margin: 60px 20px;
+    height: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+}
+
+form input, form div {
+    width: 80%;
+    padding: 16px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #005AE2;
+    color: #005AE2;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 20px;
+    padding: 16px ;
+}
+
+form div p {
+    margin-top: -1px;
+}
+
+
+form>div>img {
+    width: 5%;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-right: -20px;
+}
+
+
+form>button {
+    width: 100%;
+    padding: 8px;
+    margin: 30px 0;
+    border-radius: 20px;
+    color: white;
+    background-color: #005AE2;
+    border: 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+form>p {
+    color: #005AE2;
+    font-size: small;
+}
+
+/* FAQ */
+.FAQ {
+    position: relative;
+    padding: 100px 0;
+    height: 1300px;
+}
+
+.FAQ>Img {
+    position: absolute;
+    z-index: -10;
+}
+
+.FAQ>.bottom-img {
+    right: 0;
+    bottom: -10px;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.faq-header>h1 {
+    font-size: 2.6em;
+}
+
+.faq-header>img {
+    align-self: center;
+}
+
+.faq-main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion::after {
+    content: '\02795';
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.active::after {
+    content: '\2796';
+}
+
+.accordion>img {
+    align-self: center;
+    cursor: pointer;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: height ease-in-out 0.5s;
+}
+
+.accordion.active+.panel {
+    max-height: max-content;
+}
+
+/* revolutional */
+
+.revolutional {
+    background-color: #1e3448;
+    height: 300px;
+    position: relative;
+    margin-top: -10px;
+}
+
+.revolutional>img {
+    position: absolute;
+    max-height: 300px;
+    max-width: 400px;
+}
+
+.revolutional>.bottom-img {
+    bottom: 0;
+    right: 0;
+}
+
+.revolutional>div {
+    width: 80%;
+    text-align: center;
+    color: white;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+
+.revolutional>div>h1 {
+    font-size: 1.6em;
+
+}
+
+.revolutional>div>button {
+    padding: 15px 50px;
+    margin: 30px 0;
+    border-radius: 20px;
+    color: white;
+    background-color: #005AE2;
+    border: 0;
+}
+
+/* Footer */
+
+.footerContainer {
+    position: relative;
+    text-align: center;
+}
+
+.footerContainer > img {
+    position: absolute;
+}
+
+.footerContainer > .top-img {
+    display: none;
+}
+
+.footerContainer > .bottom-img {
+    right: 0;
+    bottom: 0;
+}
+
+.footer {
+    padding: 10px 50px;
+}
+
+.footer>.logo {
+    margin-right: 20px;
+}
+
+.footer>.logo>img {
+    margin: 15px 0;
+}
+
+.footer>.logo>div>img {
+    margin: 5px;
+}
+
+.footer>.lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.footer-list-header {
+    margin-left: 36px;
+    font-size: 1.6em;
+}
+
+.footer-lists>li {
+    margin: 5px 0;
+}
+
+.footer>p {
+    width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+
+    form>div>img {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .Seamlessly {
+        margin-left: 200px;
+    }
+
+    form {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .Header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+
+    .Header>ul,
+    .One-stop>div>ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        align-self: center;
+        gap: 60px;
+    }
+
+    .Header>ul>li>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .Header>ul>li>a:hover {
+        color: #005AE2;
+    }
+
+    .Header>div {
+        gap: 20px;
+    }
+
+    .Login>button {
+        padding: 20px 30px;
+    }
+
+
+    /* optimize online experience */
+
+    .Optimize-online-experience {
+        max-width: 50%;
+        margin: 100px auto;
+        position: relative;
+
+    }
+
+    .Optimize-online-experience>h1 {
+        font-size: 2em;
+        line-height: 60px;
+    }
+
+    .Optimize-online-experience>img {
+        display: inline;
+        max-width: 150px;
+        position: absolute;
+        top: 120px;
+        left: 300px;
+    }
+
+    /* Seamlessly */
+
+    .Seamlessly {
+        margin: 10px auto
+    }
+
+    .Seamlessly div img {
+        width: 60%;
+    }
+
+    .Seamlessly>div>p {
+        text-align: center;
+        margin: 5px auto;
+        width: 400px;
+    }
+
+    /* One Stop */
+
+    .One-stop>div {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 40px 100px;
+    }
+
+    /* Why Choose Header */
+
+    .why-choose-scissors {
+        display: flex;
+        gap: 150px;
+        margin: 80px 120px;
+    }
+
+    .why-choose-scissors-header {
+        width: 40%;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .why-choose-scissors-header>h1 {
+        font-size: 1.8em;
+    }
+
+    .why-choose-scissors-header>img {
+        position: absolute;
+        top: 20px;
+        left: -10px;
+    }
+
+    /* Price Perfect Main */
+
+    .price-perfect-main {
+        flex-direction: row;
+        gap: 0;
+        margin-top: 100px;
+        margin-left: -300px;
+
+    }
+
+    .Basic,
+    .Teams {
+        min-width: 250px;
+        align-self: center;
+        height: 350px;
+    }
+
+    .Professional {
+        min-width: 300px;
+    }
+
+    /* FORM */
+
+    form {
+        margin-left: 400px;
+    }
+
+
+    form>div>img {
+        margin-right: 5px;
+    }
+
+    /* FAQ */
+
+    .FAQ {
+        height: 1000px;
+    }
+
+    /* FOOTER */
+
+    .footerContainer {
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    .footerContainer>.top-img {
+        display: block;
+    }
+
+    .footerContainer>.bottom-img {
+        right: 0;
+        top: 180px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    .footer>p {
+        align-self: flex-end;
+        width: 50%;
+        margin-left: -28px;
+    }
+}
