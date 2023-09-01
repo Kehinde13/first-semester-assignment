@@ -8,7 +8,7 @@ function Form() {
   const [input, setInput] = useState("");
   const [accessButton, setAcessButton] = useState(false);
   const [shortUrl, setShortUrl] = useState("");
-  const [copyShortUrl, setCopyShortUrl] = useState("")
+  const [copyShortUrl, setCopyShortUrl] = useState(false)
 
   // check if a valid url function
   const isUrl = (string) => {
@@ -28,21 +28,20 @@ function Form() {
   };
 
   // function to shorten the URL
-  const getShortUrl = async (input) => {
+  const getShortUrl = async () => {
     const result = await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`);
     const data = await result.json();
-    console.log(data);
     setShortUrl(data?.result?.short_link2)
   };
 
- /*  //Copy Button
+  //Copy Button
   const copyButtton = () => {
-    navigator.clipboard.write(copyShortUrl)
-    setCopyShortUrl(current = shortUrl)
-  }; */
+    navigator.clipboard.writeText(shortUrl)
+    setCopyShortUrl(current => !current)
+  };
 
   function handleSearch(e){
-    e.preventDefault
+    e.preventDefault()
     getShortUrl()
   }
 
@@ -53,7 +52,7 @@ function Form() {
   return (
     <section className="form" id="form">
       <img src={Group3} alt="" />
-      <form action="">
+      <form onSubmit={handleSearch}>
         <input
           type="text"
           name="Url"
@@ -64,17 +63,18 @@ function Form() {
           onInput={toggleAccesibility}
         />
         <div>
-          <p>{" "}</p>
-          <img className="copyButton" src={Copy} alt="" /* onClick={copyButtton} */ />
+          <p>{shortUrl ? shortUrl : " "}</p>
+          <img className="copyButton" src={Copy} alt="" onClick={copyButtton} />
         </div>
-        <p id="alert" style={{ color: "blue", marginLeft: "10px" }}>{" "}</p>
+        <p id="alert" style={{ color: "blue", marginLeft: "10px" }}>
+          {copyShortUrl ? "your short URL has been copied to the clipboard" : "" }
+        </p>
 
         <button
           type="submit"
           className={accessButton ? " " : "disabled"}
           disabled={accessButton ? false : true}
           id="trimButton"  
-          onClick={handleSearch}
         >
           Trim URL
           <img src={magicWand} alt="" />
