@@ -1,4 +1,3 @@
-/* implement how to show content on scroll using innerHeight, clientHeight, getBoundingClientRect */
 
 HTML,
 body {
@@ -90,7 +89,7 @@ button>a {
 /* Optimize-online-experience */
 
 .Optimize-online-experience {
-  padding: 0 5px;
+    padding: 0 10px;
     max-width: 100%;
     margin: 50px auto;
     text-align: center;
@@ -107,7 +106,7 @@ button>a {
 .Seamlessly {
     position: relative;
     max-width: 60%;
-    margin: 50px 30px;
+    margin: 50px;
 }
 
 .Seamlessly>img {
@@ -146,6 +145,7 @@ button>a {
     background-color: #F9FBFD;
     margin-top: -5px;
     padding: 5px;
+    padding-right: 20px;
 }
 
 .One-stop>div>h1 {
@@ -274,6 +274,8 @@ button>a {
 .Teams>ul>li,
 .Professional>ul>li {
     margin-bottom: 15px;
+    display: flex;
+    gap: 5px;
 }
 
 .price-perfect-buttons {
@@ -526,7 +528,7 @@ form>p {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-left: 30px;
+    padding: 10px 50px;
 }
 
 .footer-list-header {
@@ -535,7 +537,7 @@ form>p {
 }
 
 .footer-lists>li {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .footer>p {

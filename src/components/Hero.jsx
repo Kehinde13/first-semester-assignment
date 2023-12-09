@@ -9,7 +9,7 @@ function Hero() {
       <section className="Optimize-online-experience">
         <h1>
           Optimize Your Online Experience with Our Advanced
-          <span>URL Shortening</span> Solution
+          <span> URL Shortening</span> Solution
         </h1>
         <img src={vector3} alt="" />
         <p>
